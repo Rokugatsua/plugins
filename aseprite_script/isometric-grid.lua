@@ -26,8 +26,8 @@ local function drawLines(width, maxWidth, maxHeight, color)
         return
     end
 
-    local toLeft = width // 2
-    local toRight = width // 2 + 1
+    local toLeft = width // 2 - 1
+    local toRight = width // 2
 
     for y = 0, maxHeight, 1 do
         for x = 0, maxWidth, 1 do
@@ -51,7 +51,7 @@ local function drawLines(width, maxWidth, maxHeight, color)
         toLeft = toLeft - 2
         if (toLeft <= 0)
         then
-            toLeft = width
+            toLeft = width - 1
         end
         
         -- change index position for Right draw
